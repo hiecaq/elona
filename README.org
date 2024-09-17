@@ -1,0 +1,16 @@
+This repo shows how I run Elona under Wine, in Guix.
+
+* Preparation
+Download Elona from its [[https://ylvania.org/elona_e.html][official website]], and unpack it under a sub-directory named =elona= in this root directory. Patch it as needed.
+
+* Environment
+Use =./env= to enter the Guix Shell.
+
+* Run
+When in the Guix Shell environment, use one of the =run(_zh|_jp)?.sh= to start the game. Enjoy!
+
+* What to do if the window is too small?
+Full screen does not work on my site, even with Wine configured under virtual desktop mode. However, we can change the X11 resolution instead, for example:
+#+begin_src sh
+  xrandr --output DisplayPort-0 --mode 1920x1080
+#+end_src

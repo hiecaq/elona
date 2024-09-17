@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -ex
+
+exec guix time-machine --channels=channels.scm --  shell \
+     --container \
+     --network \
+     --share=/dev/snd/seq \
+     --preserve='^DISPLAY$' --preserve='^XAUTHORITY$' \
+     --expose=$XAUTHORITY \
+     --expose=/sys/class/input \
+     --expose=/sys/devices \
+     --expose=/sys/dev \
+     --expose=/sys/bus/pci \
+     --preserve='XDG_RUNTIME_DIR' \
+     --expose="$XDG_RUNTIME_DIR/pulse" \
+     --expose=/dev/dri \
+     -m manifest.scm

@@ -1,5 +1,4 @@
 (use-modules (guix)
-             ((guix licenses) #:prefix license:)
              (gnu packages)
              (gnu packages base))
 
@@ -14,8 +13,6 @@
  (list
   (packages->manifest (list elona-locales))
   (specifications->manifest
-   '("openssl"
-     "nss-certs"
-     "coreutils"
+   '("coreutils"
      "wine64-staging"
      "grep"))))

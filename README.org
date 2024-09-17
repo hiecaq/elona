@@ -14,3 +14,8 @@ Full screen does not work on my site, even with Wine configured under virtual de
 #+begin_src sh
   xrandr --output DisplayPort-0 --mode 1920x1080
 #+end_src
+
+* Reference
+- The way search for the locale path is from https://lists.gnu.org/archive/html/help-guix/2020-02/msg00170.html
+- The way to run Wine under non-Latin locale (and specifically for Elona) is from [[https://elona.fandom.com/wiki/User_blog:Biting_Chicken/Running_Elona_via_Wine][this post]]
+- The way to do this with Guix shell is from [[https://www.futurile.net/2023/04/29/guix-shell-virtual-environments-containers/][this post]]
